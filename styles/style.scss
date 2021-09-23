@@ -1,6 +1,7 @@
 $brandColor: #333870;
 $components: #FD8967;
 $bgcolor: #F6FAFF;
+$boxShadow: 0 1.5625rem 2.5rem 0.3125rem rgba(0,0,0,0.03);
 $accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FD8967'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
 $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FD8967'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
 
@@ -62,7 +63,7 @@ input {
     height: 100vh;
     background-color: rgba(51, 56, 112, 0.8);
     position: fixed;
-    z-index: 9;
+    z-index: 9999;
     display: none;
     &.visible {
         display: block;
@@ -506,7 +507,7 @@ header {
     .accordion-item {
         margin-bottom: 0.625rem;
         border: 0;
-        box-shadow: 0 1.5625rem 2.5rem 0.3125rem rgba(0,0,0,0.03);
+        box-shadow: $boxShadow;
         border-radius: 1rem;
         .accordion-header {
             height: 3.75rem;
@@ -598,7 +599,7 @@ header {
         justify-content: space-between;
         align-items: center;
         background-color: white;
-        box-shadow: 0 1.5625rem 2.5rem 0.3125rem rgba(0,0,0,0.03);
+        box-shadow: $boxShadow;
         position: relative;
         cursor: pointer;
     }
@@ -617,13 +618,13 @@ header {
             border-radius: 1rem;
             padding: 0 0.375rem 0 1.25rem;
             background-color: white;
-            box-shadow: 0 1.5625rem 2.5rem 0.3125rem rgba(0,0,0,0.03) !important;
+            box-shadow: $boxShadow !important;
             outline: none;
             position: relative;
             border: 0;
             box-sizing: border-box;
             &:focus {
-                box-shadow: 0 1.5625rem 2.5rem 0.3125rem rgba(0,0,0,0.03) !important;
+                box-shadow: $boxShadow !important;
             }
         }
         & > ul {

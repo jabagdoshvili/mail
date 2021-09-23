@@ -11,7 +11,7 @@ $.fn.InitTable = function (object) {
         order: [],
         responsive: true,
         "paging": true,
-        "pageLength": 5,
+        "pageLength": 6,
         ...object,
     });
 }

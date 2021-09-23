@@ -75,7 +75,7 @@ input::placeholder {
   height: 100vh;
   background-color: rgba(51, 56, 112, 0.8);
   position: fixed;
-  z-index: 9;
+  z-index: 9999;
   display: none;
 }
 
