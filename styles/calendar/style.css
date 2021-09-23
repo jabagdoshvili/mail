@@ -4,7 +4,7 @@
       grid-template-columns: repeat(2, 22.1875rem) 17.9375rem;
   grid-gap: 3.875rem;
   width: 63.75rem;
-  height: 24.1875rem;
+  height: 22.1875rem;
   -webkit-box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
@@ -228,13 +228,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 0;
 }
 
 .calendar-wrapper .predefined-periods ul li {
   font-size: 0.875rem;
   font-weight: 400;
   color: #333870;
-  height: 2.625rem;
+  height: 2.225rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

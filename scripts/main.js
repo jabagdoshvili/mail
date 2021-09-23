@@ -191,6 +191,11 @@ function InitDomEvents() {
         $('.filter-dropdown-header').removeClass('active')
     })
 
+    $('.filter-dropdown li').click(function () {
+        $('.status-tab span').text($(this).html())
+        $('.filter-dropdown').removeClass('active')
+    })
+
     $('.dropdown').click(function () {
         $('.filter-dropdown-header').toggleClass('active')
     })
