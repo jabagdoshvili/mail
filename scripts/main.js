@@ -214,7 +214,7 @@ void function InitDomEvents() {
         $('.filter-dropdown').removeClass('visible')
     })
 
-    $('tbody tr > td:not(:last-child)').on('click', function(e) {
+    $(document).on('click', 'tbody tr > td:not(:last-child)', function(e) {
         var target = $( e.target );
         if(target.is('.round')) {
             $('.mail-inside').removeClass('visible')
@@ -222,6 +222,7 @@ void function InitDomEvents() {
             $('.mail-inside').addClass('visible')
         }
     })
+
 
     $('.round input[type="checkbox"]').on('click', function() {
         if ($(this).is(':checked')) {
@@ -273,13 +274,18 @@ void function InitDomEvents() {
     })
 
     $(document).on('click', function() {
-        $('.overflow.visible').removeClass('visible')
+        $('.overflow:not(.mail-inside).visible').removeClass('visible')
     })
 
-    $('.modals, .add-button, table tr').on('click', function(e) {
+    $('.modals, .add-button').on('click', function(e) {
         e.stopPropagation()
     })
 
+    $('body').on('click', function(e) {
+        if($('.mail-inside').hasClass('visible')) {
+            $('.mail-inside').removeClass('visible')
+        }
+    })
 
     $(document).on('click', function() {
         $('.calendar-wrapper.visible').removeClass('visible')

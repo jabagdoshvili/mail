@@ -113,6 +113,11 @@ void function InitCalendar() {
         $(customCalendar).on('click', '.month li:not(.empty)', function () {
             iteration++
             chosenDate = $(this).text()
+            if($(this).closest('.calendar').index() == 1) {
+                month+=1
+            }
+
+            console.log(chosenDate, month, year);
 
             if ($('.month li').hasClass('end-date')) {
                 iteration = 1
