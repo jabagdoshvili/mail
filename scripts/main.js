@@ -189,6 +189,7 @@ void function InitDomEvents() {
 
     $('.status-tab').click(function () {
         $('.filter-dropdown').toggleClass('active')
+        $('calendar-tab').removeClass('active')
     })
 
     $('.dropdown').click(function () {
@@ -210,6 +211,7 @@ void function InitDomEvents() {
 
     $('.calendar-tab').on('click', function() {
         $('.calendar-wrapper ').toggleClass('visible')
+        $('.status-tab').removeClass('visible')
     })
 
     $('tbody tr').on('click', function(e) {
