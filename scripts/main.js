@@ -185,34 +185,6 @@ $('#rounded-table').InitTable({
 })
 
 
-$(function() {
-
-    var start = moment().subtract(29, 'days');
-    var end = moment();
-
-    function cb(start, end) {
-        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-    }
-
-    $('#reportrange').daterangepicker({
-        startDate: start,
-        endDate: end,
-        "alwaysShowCalendars": true,
-        ranges: {
-           'Today': [moment(), moment()],
-           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-           'This Month': [moment().startOf('month'), moment().endOf('month')],
-           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        }
-    }, cb);
-
-    cb(start, end);
-
-});
-
-
 void function InitDomEvents() {
 
     $('.status-tab').click(function () {
@@ -228,11 +200,25 @@ void function InitDomEvents() {
     })
 
     $('.add-button').on('click', function() {
+        $('.email-popup').addClass('visible')
+    })
+
+    $('.set-up').on('click', function() {
+        $('.email-popup').removeClass('visible')
         $('.add-inbox').addClass('visible')
     })
 
-    $('tbody tr').on('click', function() {
-        $('.mail-inside').addClass('visible')
+    $('.calendar-tab').on('click', function() {
+        $('.calendar-wrapper ').toggleClass('visible')
+    })
+
+    $('tbody tr').on('click', function(e) {
+        var target = $( e.target );
+        if(target.is('.round')) {
+            $('.mail-inside').removeClass('visible')
+        } else {
+            $('.mail-inside').addClass('visible')
+        }
     })
 
     $('.round input[type="checkbox"]').on('click', function() {
@@ -251,8 +237,12 @@ void function InitDomEvents() {
         let atr = $(this).attr('tab')
         $(this).addClass('active').siblings().removeClass('active')
         let percent = $(this).index() * 100
-        $('.modal-wrapper').css('transform', `translate(-${percent}%)`)
         $(`.${atr}`,'.modal-wrapper').addClass('active').siblings().removeClass('active')
+        if(atr == 'schedule' && $(`.${atr}`,'.modal-wrapper').hasClass('active')) {
+            $('.send').html('Save')
+        } else {
+            $('.send').html('Proceed to Save')
+        }
     })
 
     $('form').on('submit', function(ev) {
@@ -262,6 +252,39 @@ void function InitDomEvents() {
         } else {
             // submit here
         }
+    })
+
+    $(document).on('click', function() {
+        $('.filter-dropdown-header.active').removeClass('active')
+    })
+
+    $('.filter-dropdown-header, .dropdown').on('click', function(e) {
+        e.stopPropagation()
+    })
+
+    $(document).on('click', function() {
+        $('.filter-dropdown.active').removeClass('active')
+    })
+
+    $('.filter-dropdown, .status-tab').on('click', function(e) {
+        e.stopPropagation()
+    })
+
+    $(document).on('click', function() {
+        $('.overflow.visible').removeClass('visible')
+    })
+
+    $('.modals, .add-button, table tr').on('click', function(e) {
+        e.stopPropagation()
+    })
+
+
+    $(document).on('click', function() {
+        $('.calendar-wrapper.visible').removeClass('visible')
+    })
+
+    $('.calendar-wrapper, .calendar-tab').on('click', function(e) {
+        e.stopPropagation()
     })
 
 }()

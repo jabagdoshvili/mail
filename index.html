@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/styles/datepicker/style.css" />
+    <link rel="stylesheet" href="styles/calendar/style.css">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 
@@ -199,7 +200,7 @@
         </div>
     </div>
 
-    <div class="overflow email-popup visible">
+    <div class="overflow email-popup">
         <div class="modals mails">
             <div class="modal-title">
                 <h2>Connect New Email</h2>
@@ -391,9 +392,9 @@
                     Isak Johannesson
                     <img src="/assets/images/down.svg" alt="">
                     <ul class="filter-dropdown-header">
-                        <li> <img src="/assets/images/headphones.svg" alt=""> Support</li>
-                        <li> <img src="/assets/images/settings.svg" alt="">Settings</li>
-                        <li> <img src="/assets/images/login.svg" alt="">Logout</li>
+                        <li> <img src="/assets/images/headphones.svg" alt=""> <img src="/assets/images/headphonesv2.svg" alt="">Support <i class="fa fa-external-link" aria-hidden="true"></i></li>
+                        <li> <img src="/assets/images/settings.svg" alt=""> <img src="/assets/images/settingsv2.svg" alt="">Settings <i class="fa fa-external-link" aria-hidden="true"></i></li>
+                        <li> <img src="/assets/images/login.svg" alt=""> <img src="/assets/images/loginv2.svg" alt="">Logout</li>
                     </ul>
                 </li>
             </ul>
@@ -411,10 +412,13 @@
                 <img src="/assets/images/duotone-search.svg" alt="">
             </div>
         </div>
-        <div class="filter-tab">
+        <div class="filter-tab calendar-tab">
             <input type="text" placeholder="Select a time period" name="date" id="reportrange">
             <div class="filter-icon">
                 <img src="/assets/images/duotone-calendar.svg" alt="">
+            </div>
+            <div class="calendar-wrapper">
+
             </div>
         </div>
         <div class="filter-tab status-tab">
@@ -446,6 +450,7 @@
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="/scripts/calendar.js"></script>
     <script src="/scripts/main.js"></script>
 
 </body>
