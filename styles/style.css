@@ -980,6 +980,7 @@ header .profile-area > ul > li img {
   padding-bottom: 1.25rem;
   -webkit-box-shadow: 0 1.5625rem 2.5rem rgba(0, 0, 0, 0.03);
           box-shadow: 0 1.5625rem 2.5rem rgba(0, 0, 0, 0.03);
+  cursor: pointer !important;
 }
 
 .table-wrapper table.dataTable tbody tr td {

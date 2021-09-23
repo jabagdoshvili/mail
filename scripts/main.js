@@ -189,7 +189,7 @@ void function InitDomEvents() {
 
     $('.status-tab').click(function () {
         $('.filter-dropdown').toggleClass('active')
-        $('calendar-tab').removeClass('active')
+        $('.filter-dropdown-header').removeClass('active')
     })
 
     $('.dropdown').click(function () {
@@ -211,10 +211,10 @@ void function InitDomEvents() {
 
     $('.calendar-tab').on('click', function() {
         $('.calendar-wrapper ').toggleClass('visible')
-        $('.status-tab').removeClass('visible')
+        $('.filter-dropdown').removeClass('visible')
     })
 
-    $('tbody tr').on('click', function(e) {
+    $('tbody tr > td:not(:last-child)').on('click', function(e) {
         var target = $( e.target );
         if(target.is('.round')) {
             $('.mail-inside').removeClass('visible')

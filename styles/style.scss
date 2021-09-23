@@ -729,7 +729,7 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
             margin: 0.3125rem;
             padding-bottom: 1.25rem;
             box-shadow: 0 1.5625rem 2.5rem rgba(#000, 0.03);
-
+            cursor: pointer !important;
             td {
                 height: 3.75rem;
             }
