@@ -486,7 +486,7 @@ header .profile-area > ul > li:last-child .filter-dropdown-header .fa-external-l
   color: #FD8967;
   font-size: 0.9rem;
   position: absolute;
-  left: 140px;
+  right: 13px;
   opacity: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
