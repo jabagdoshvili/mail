@@ -245,6 +245,10 @@
   cursor: pointer;
 }
 
+.calendar-wrapper .predefined-periods ul li.active {
+  color: #fd8967;
+}
+
 .calendar-wrapper .predefined-periods ul + .selected {
   font-size: 0.875rem;
   font-weight: 400;

@@ -233,6 +233,9 @@
               align-items: center;
               margin-bottom: 0.625rem;
               cursor: pointer;
+              &.active {
+                color: #fd8967;
+            }
           }
 
           & + .selected {
