@@ -691,7 +691,7 @@ header .profile-area > ul > li img {
   position: relative;
 }
 
-.accordion-area .accordion-item .accordion-button::after {
+.accordion-area .accordion-item .accordion-button::before {
   content: "";
   height: 0.0625rem;
   width: calc(100% - 2*1.25rem);
@@ -961,6 +961,10 @@ header .profile-area > ul > li img {
   padding: 0 1.25rem;
 }
 
+.table-wrapper table.dataTable tr th:nth-child(4), .table-wrapper table.dataTable tr th:nth-child(5), .table-wrapper table.dataTable tr th:nth-child(6), .table-wrapper table.dataTable tr td:nth-child(4), .table-wrapper table.dataTable tr td:nth-child(5), .table-wrapper table.dataTable tr td:nth-child(6) {
+  text-align: center;
+}
+
 .table-wrapper table.dataTable thead {
   background-color: transparent;
 }
@@ -969,6 +973,8 @@ header .profile-area > ul > li img {
   font-family: 600;
   height: 0.625rem;
   border-bottom: 1.875rem solid transparent;
+  font-size: 0.8125rem;
+  white-space: nowrap;
 }
 
 .table-wrapper table.dataTable tbody tr {
@@ -985,6 +991,8 @@ header .profile-area > ul > li img {
 
 .table-wrapper table.dataTable tbody tr td {
   height: 3.75rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
 }
 
 .table-wrapper table.dataTable tbody tr td:first-child,

@@ -3,7 +3,7 @@
   -ms-grid-columns: (22.1875rem)[2] 17.9375rem;
       grid-template-columns: repeat(2, 22.1875rem) 17.9375rem;
   grid-gap: 3.875rem;
-  width: 68.75rem;
+  width: 63.75rem;
   height: 24.1875rem;
   -webkit-box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.2);
@@ -55,9 +55,9 @@
   width: calc(100% + 1.3125rem);
 }
 
-.calendar-wrapper .calendar .head .current .current-date {
+.calendar-wrapper .calendar .head .current .current-date span {
   font-size: 0.875rem;
-  color: #333870;
+  color: #333870 !important;
   line-height: 1.3125rem;
 }
 

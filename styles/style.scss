@@ -521,7 +521,7 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
             height: 3.75rem;
             outline: none;
             position: relative;
-            &::after {
+            &::before {
                 content: "";
                 height: 0.0625rem;
                 width: calc(100% - 2*1.25rem);
@@ -712,12 +712,22 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
             padding: 0 1.25rem;
         }
 
+            tr {
+                th, td {
+                    &:nth-child(4),&:nth-child(5),&:nth-child(6)  {
+                        text-align: center;
+                    } 
+                }
+            }
+
         thead {
             background-color: transparent;
             th {
                 font-family: 600;
                 height: 0.625rem;
                 border-bottom: 1.875rem solid transparent;
+                font-size: 0.8125rem;
+                white-space: nowrap;
             }
         }
 
@@ -732,6 +742,8 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
             cursor: pointer !important;
             td {
                 height: 3.75rem;
+                font-size: 0.875rem;
+                white-space: nowrap;
             }
 
             td:first-child,
